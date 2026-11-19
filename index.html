@@ -1,1047 +1,1067 @@
 <!DOCTYPE html>
+
 <html lang="fr" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio d'Abdoulaye Mahamadou Touré — Data Analyst, Chargé Suivi-Évaluation (MEAL), Ingénieur Logiciel et Formateur Data basé à Bamako, Mali.">
-    <title>Abdoulaye Mahamadou Touré — Data Analyst, S&E (MEAL) & Formateur</title>
-    
-    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                    colors: {
-                        navy: {
-                            900: '#0F172A',
-                            800: '#1E293B',
-                            700: '#334155',
-                        },
-                        brand: {
-                            600: '#1D4ED8',
-                            700: '#1E40AF',
-                            50: '#EFF6FF',
-                            100: '#DBEAFE',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Portfolio d'Abdoulaye Mahamadou Touré — Data Analyst, Chargé Suivi-Évaluation (MEAL), Ingénieur Logiciel et Formateur Data basé à Bamako, Mali.">
+
+<title>Abdoulaye Mahamadou Touré — Data Analyst, S&E (MEAL) & Formateur</title>
+
+
+<!-- Google Fonts: Plus Jakarta Sans & Inter -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+
+<!-- Tailwind CSS -->
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+
+tailwind.config = {
+
+theme: {
+
+extend: {
+
+fontFamily: {
+
+sans: ['Inter', 'sans-serif'],
+
+display: ['Plus Jakarta Sans', 'sans-serif'],
+
+},
+
+colors: {
+
+navy: {
+
+900: '#0F172A',
+
+800: '#1E293B',
+
+700: '#334155',
+
+},
+
+brand: {
+
+600: '#1D4ED8',
+
+700: '#1E40AF',
+
+50: '#EFF6FF',
+
+100: '#DBEAFE',
+
+}
+
+}
+
+}
+
+}
+
+}
+
+</script>
+
 </head>
+
 <body class="bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-brand-100 selection:text-brand-700">
 
-    <!-- =====================================================================
-         1. BARRE DE NAVIGATION STICKY
-    ====================================================================== -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo / Initiales -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-navy-900 text-white font-display font-bold text-sm flex items-center justify-center tracking-wider group-hover:bg-brand-600 transition-colors shadow-sm">
-                        AT
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-display font-bold text-navy-900 text-sm sm:text-base leading-tight">Abdoulaye Touré</span>
-                        <span class="text-xs text-slate-500 hidden sm:inline">Data · S&E (MEAL) · Formation</span>
-                    </div>
-                </a>
 
-                <!-- Navigation Desktop -->
-                <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-600">
-                    <a href="#projets" class="hover:text-brand-600 transition-colors">Projets</a>
-                    <a href="#methode" class="hover:text-brand-600 transition-colors">Méthode</a>
-                    <a href="#parcours" class="hover:text-brand-600 transition-colors">Parcours</a>
-                    <a href="#competences" class="hover:text-brand-600 transition-colors">Compétences</a>
-                    <a href="#formation" class="hover:text-brand-600 transition-colors">Formation</a>
-                </nav>
 
-                <!-- CTA & Menu Burger Mobile -->
-                <div class="flex items-center gap-3">
-                    <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl bg-navy-900 hover:bg-brand-600 text-white text-sm font-medium transition-colors shadow-sm">
-                        Me contacter
-                    </a>
-                    <button id="mobile-menu-btn" type="button" aria-label="Ouvrir le menu" class="md:hidden p-2.5 rounded-xl text-slate-600 hover:text-navy-900 hover:bg-slate-100 transition-colors">
-                        <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
+<!-- =====================================================================
 
-        <!-- Menu Mobile Déroulant -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-2 shadow-lg">
-            <a href="#projets" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Projets</a>
-            <a href="#methode" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Méthode</a>
-            <a href="#parcours" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Parcours</a>
-            <a href="#competences" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Compétences</a>
-            <a href="#formation" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Formation</a>
-            <div class="pt-2">
-                <a href="#contact" class="mobile-link block w-full text-center px-4 py-3 rounded-xl bg-brand-600 text-white font-medium text-base">
-                    Me contacter
-                </a>
-            </div>
-        </div>
-    </header>
+BARRE DE NAVIGATION STICKY
+====================================================================== -->
 
-    <main>
-        <!-- =====================================================================
-             2. SECTION HERO (EN-TÊTE)
-        ====================================================================== -->
-        <section class="pt-12 pb-16 sm:pt-16 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-                
-                <!-- Colonne Texte (7 colonnes) -->
-                <div class="lg:col-span-7 space-y-6">
-                    <!-- Badge disponibilité -->
-                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-medium">
-                        <span class="relative flex h-2.5 w-2.5">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                        </span>
-                        Disponible pour opportunités · Télétravail & Missions terrain
-                    </div>
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
 
-                    <!-- Titre principal -->
-                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.25rem] text-navy-900 tracking-tight leading-[1.12]">
-                        Je transforme vos données en <span class="text-brand-600">décisions.</span>
-                    </h1>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                    <!-- Accroche double profil -->
-                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-                        Titulaire d'un <strong class="text-navy-900 font-semibold">Master en Génie Logiciel</strong> et spécialisé en <strong class="text-navy-900 font-semibold">Suivi-Évaluation (DU GAR GP SE)</strong>, j'allie analyse de données (Python, SQL, Power BI, Excel, Orange Data Mining), collecte terrain (KoboToolbox) et <strong class="text-navy-900 font-semibold">formation Data & IA</strong> pour fiabiliser les décisions et renforcer les équipes.
-                    </p>
+<div class="flex justify-between items-center h-16">
 
-                    <!-- Badges des postes visés -->
-                    <div class="flex flex-wrap gap-2 pt-1">
-                        <span class="px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium shadow-2xs">Data Analyst</span>
-                        <span class="px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium shadow-2xs">Chargé S&E · MEAL</span>
-                        <span class="px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium shadow-2xs">Développeur Data Pipeline</span>
-                        <span class="px-3 py-1 rounded-lg bg-brand-50 border border-brand-100 text-brand-700 text-xs sm:text-sm font-medium">Formateur Data & IA</span>
-                    </div>
+<!-- Logo / Initiales -->
 
-                    <!-- Boutons d'action -->
-                    <div class="flex flex-wrap items-center gap-3 pt-2">
-                        <a href="https://wa.me/22378119788?text=Bonjour%20Abdoulaye%2C%20j'ai%20consult%C3%A9%20votre%20portfolio%20et%20je%20souhaiterais%20%C3%A9changer%20avec%20vous." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm transition-all shadow-sm hover:shadow">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
-                            WhatsApp · +223 78 11 97 88
-                        </a>
+<a href="#" class="flex items-center gap-3 group">
 
-                        <a href="tel:+22378119788" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white hover:bg-slate-50 text-navy-900 border border-slate-200 font-medium text-sm transition-colors shadow-2xs">
-                            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                            Appeler
-                        </a>
-                        
-                        <a href="mailto:abdelraul140385@gmail.com" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white hover:bg-slate-50 text-navy-900 border border-slate-200 font-medium text-sm transition-colors shadow-2xs">
-                            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            E-mail
-                        </a>
+<div class="w-10 h-10 rounded-xl bg-navy-900 text-white font-display font-bold text-sm flex items-center justify-center tracking-wider group-hover:bg-brand-600 transition-colors shadow-sm">
 
-                        <a href="https://github.com/abdoulaye1403/Portfolio_Pipeline_Mali" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-medium text-sm transition-colors shadow-2xs">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                            GitHub
-                        </a>
-                    </div>
+AT
 
-                    <!-- Infos rapides -->
-                    <div class="pt-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-500 border-t border-slate-200/80">
-                        <span class="inline-flex items-center gap-1.5">
-                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            Bamako, Mali · GMT+0
-                        </span>
-                        <span class="inline-flex items-center gap-1.5">
-                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
-                            Français · Bambara · Anglais
-                        </span>
-                    </div>
-                </div>
+</div>
 
-                <!-- Colonne Carte Portrait (5 colonnes) -->
-                <div class="lg:col-span-5 flex justify-center lg:justify-end">
-                    <div class="relative w-full max-w-sm">
-                        <!-- Cadre décoratif arrière -->
-                        <div class="absolute -inset-2 bg-gradient-to-tr from-brand-600/15 to-slate-200/60 rounded-3xl blur-sm"></div>
-                        
-                        <!-- Carte principale portrait -->
-                        <div class="relative bg-white p-4 rounded-3xl border border-slate-200 shadow-lg">
-                            <div class="aspect-[4/5] w-full rounded-2xl bg-slate-100 overflow-hidden relative flex flex-col items-center justify-center border border-slate-200/70">
-                                <!-- Photo de profil en tenue professionnelle cadrée sur le haut -->
-                                <img src="profil.jpg" alt="Portrait professionnel d'Abdoulaye Mahamadou Touré" class="w-full h-full object-cover object-top" onerror="this.style.display='none'; document.getElementById('portrait-placeholder').classList.remove('hidden');">
-                                
-                                <!-- Fallback élégant si profil.jpg n'est pas encore ajoutée -->
-                                <div id="portrait-placeholder" class="hidden flex flex-col items-center justify-center text-center p-6 w-full h-full bg-gradient-to-b from-slate-100 to-slate-200">
-                                    <div class="w-24 h-24 rounded-full bg-navy-900 text-white font-display font-bold text-2xl flex items-center justify-center mb-4 shadow-md">
-                                        AT
-                                    </div>
-                                    <p class="font-display font-bold text-navy-900 text-base">Abdoulaye M. Touré</p>
-                                    <p class="text-xs text-slate-500 mt-1">Ajoutez <code class="bg-white px-1.5 py-0.5 rounded border border-slate-300 text-slate-700">profil.jpg</code> à la racine de votre dépôt GitHub</p>
-                                </div>
-                            </div>
+<div class="flex flex-col">
 
-                            <!-- Légende interne carte -->
-                            <div class="pt-4 pb-1 px-1 flex items-center justify-between">
-                                <div>
-                                    <p class="font-display font-bold text-navy-900 text-sm">Abdoulaye Mahamadou Touré</p>
-                                    <p class="text-xs text-slate-500">Ingénieur Logiciel & Data Analyst</p>
-                                </div>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">
-                                    Mali 🇲🇱
-                                </span>
-                            </div>
-                        </div>
+<span class="font-display font-bold text-navy-900 text-sm sm:text-base leading-tight">Abdoulaye Touré</span>
 
-                        <!-- Badge flottant -->
-                        <div class="absolute -bottom-4 -left-3 sm:-left-6 bg-navy-900 text-white px-4 py-2.5 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-2.5">
-                            <span class="w-2.5 h-2.5 rounded-full bg-brand-600 ring-4 ring-brand-600/30"></span>
-                            <span class="font-display font-semibold text-xs sm:text-sm tracking-wide">Data · S&E · Formation</span>
-                        </div>
-                    </div>
-                </div>
+<span class="text-xs text-slate-500 hidden sm:inline">Data · S&E (MEAL) · Formation</span>
 
-            </div>
-        </section>
+</div>
 
-        <!-- =====================================================================
-             3. BANDEAU OUTILS & ÉCOSYSTÈME
-        ====================================================================== -->
-        <section class="py-8 bg-white border-y border-slate-200">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p class="text-center text-xs font-semibold uppercase tracking-widest text-slate-400 mb-5">
-                    Écosystème technique & outils maîtrisés
-                </p>
-                <div class="flex flex-wrap justify-center items-center gap-2.5 sm:gap-3">
-                    <span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">Python (Pandas)</span>
-                    <span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">Power BI</span>
-                    <span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">SQL (PostgreSQL)</span>
-                    <span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">Excel Avancé</span>
-                    <span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">KoboToolbox / XLSForm</span>
-                    <span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">Orange Data Mining</span>
-                    <span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">Git / GitHub</span>
-                    <span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">LaTeX</span>
-                </div>
-            </div>
-        </section>
+</a>
 
-        <!-- =====================================================================
-             4. BANDEAU CHIFFRES CLÉS (4 KPI)
-        ====================================================================== -->
-        <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs">
-                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-brand-600">Master & DU</div>
-                    <div class="mt-2 font-semibold text-navy-900 text-sm sm:text-base">Génie Logiciel & S&E</div>
-                    <p class="mt-1 text-xs text-slate-500">Double compétence développement, data & suivi-évaluation</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs">
-                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-navy-900">196</div>
-                    <div class="mt-2 font-semibold text-navy-900 text-sm sm:text-base">Ménages analysés (Mali)</div>
-                    <p class="mt-1 text-xs text-slate-500">Couverture de 5 régions sur la sécurité alimentaire & crédit</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs">
-                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-brand-600">45+</div>
-                    <div class="mt-2 font-semibold text-navy-900 text-sm sm:text-base">Variables KoboToolbox</div>
-                    <p class="mt-1 text-xs text-slate-500">Questionnaires structurés avec contrôles et logiques de saut</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs">
-                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-navy-900">100%</div>
-                    <div class="mt-2 font-semibold text-navy-900 text-sm sm:text-base">Approche terrain & code</div>
-                    <p class="mt-1 text-xs text-slate-500">De la collecte mobile jusqu'au reporting automatisé</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- =====================================================================
-             5. SECTION VALEUR AJOUTÉE ("CE QUE J'APPORTE")
-        ====================================================================== -->
-        <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-            <div class="max-w-2xl mb-10">
-                <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Valeur ajoutée</span>
-                <h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900">Ce que j'apporte à vos projets</h2>
-                <p class="mt-2 text-slate-600 text-sm sm:text-base">Une approche rigoureuse qui relie la réalité du terrain aux exigences des décideurs.</p>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Carte 1 -->
-                <div class="bg-white p-7 rounded-2xl border border-slate-200 hover:border-brand-600/40 transition-colors shadow-2xs flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-navy-900">Des décisions éclairées</h3>
-                        <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
-                            Conception de tableaux de bord interactifs sous Power BI et Excel orientés KPI métier, suivi de cadres logiques et pilotage d'indicateurs en temps réel.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-medium text-brand-600">
-                        Power BI · DAX · Excel Dynamique
-                    </div>
-                </div>
+<!-- Navigation Desktop -->
 
-                <!-- Carte 2 -->
-                <div class="bg-white p-7 rounded-2xl border border-slate-200 hover:border-brand-600/40 transition-colors shadow-2xs flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-navy-900">Des données fiables dès la source</h3>
-                        <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
-                            Structuration de questionnaires numériques sous KoboToolbox et XLSForm intégrant groupes thématiques, contraintes de saisie, calculs et logiques de saut.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-medium text-brand-600">
-                        KoboToolbox · XLSForm · Contrôle Qualité
-                    </div>
-                </div>
+<nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-600">
 
-                <!-- Carte 3 -->
-                <div id="formation" class="bg-white p-7 rounded-2xl border border-slate-200 hover:border-brand-600/40 transition-colors shadow-2xs flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-navy-900">Formation Data, IA & Pipelines</h3>
-                        <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
-                            Automatisation des flux sous Python (Pandas) et SQL, modélisation visuelle avec Orange Data Mining, et animation de formations pratiques pour rendre vos équipes autonomes.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-medium text-brand-600">
-                        Python · Orange Data Mining · Formation
-                    </div>
-                </div>
-            </div>
-        </section>
+<a href="#projets" class="hover:text-brand-600 transition-colors">Projets</a>
 
-        <!-- =====================================================================
-             6. SECTION PROJETS (2 ÉTUDES DE CAS MAJEURES + 3 SECONDAIRES)
-        ====================================================================== -->
-        <section id="projets" class="py-14 sm:py-20 bg-white border-y border-slate-200">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-2xl mb-12">
-                    <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Réalisations & Études de cas</span>
-                    <h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900">Projets Data, S&E & Pipelines</h2>
-                    <p class="mt-2 text-slate-600 text-sm sm:text-base">Des réalisations concrètes construites à partir de données d'enquête et de pipelines reproductibles.</p>
-                </div>
+<a href="#methode" class="hover:text-brand-600 transition-colors">Méthode</a>
 
-                <!-- 2 GRANDES ÉTUDES DE CAS -->
-                <div class="space-y-10 mb-14">
+<a href="#parcours" class="hover:text-brand-600 transition-colors">Parcours</a>
 
-                    <!-- Projet Majeur 1 : Rapport de Suivi-Évaluation - Mali (Juin 2026) -->
-                    <article class="bg-[#F8FAFC] rounded-3xl border border-slate-200 overflow-hidden shadow-xs">
-                        <!-- Aperçu visuel du Dashboard Power BI (image réelle + maquette interactive de secours) -->
-                        <div class="relative bg-slate-100 border-b border-slate-200">
-                            <img src="apercu_dashboard_powerbi.png" alt="Rapport de Suivi-Évaluation - Mali (Juin 2026) : 196 ménages, rendement moyen 441,5 kg, taux d'accès au crédit 35,71 %" class="w-full h-auto block" onerror="this.style.display='none'; document.getElementById('dashboard-visual-preview').classList.remove('hidden');">
+<a href="#competences" class="hover:text-brand-600 transition-colors">Compétences</a>
 
-                            <!-- Aperçu visuel fidèle du Dashboard Power BI (affiché automatiquement dans la prévisualisation web) -->
-                            <div id="dashboard-visual-preview" class="hidden p-4 sm:p-6 bg-[#EFEFEF]">
-                                <div class="bg-white rounded-xl border border-slate-300 shadow-sm overflow-hidden">
-                                    <!-- En-tête du rapport Power BI -->
-                                    <div class="bg-[#E2E2E2] py-2.5 px-4 text-center border-b border-slate-300">
-                                        <h4 class="font-display font-bold text-base sm:text-xl text-[#6B1D7B]">
-                                            Rapport de Suivi-Évaluation - Mali (Juin 2026)
-                                        </h4>
-                                    </div>
+<a href="#formation" class="hover:text-brand-600 transition-colors">Formation</a>
 
-                                    <div class="p-3 sm:p-4 grid grid-cols-1 lg:grid-cols-12 gap-3 bg-[#F4F4F4]">
-                                        <!-- Panneau Filtres / Segments (Gauche - 3 cols) -->
-                                        <div class="lg:col-span-3 space-y-2.5">
-                                            <!-- Filtre Genre -->
-                                            <div class="grid grid-cols-2 gap-1.5">
-                                                <div class="bg-white border border-slate-300 rounded px-2.5 py-2 text-xs font-medium text-slate-700 shadow-2xs">Femme</div>
-                                                <div class="bg-white border border-slate-300 rounded px-2.5 py-2 text-xs font-medium text-slate-700 shadow-2xs">Homme</div>
-                                            </div>
-                                            <!-- Filtre Régions -->
-                                            <div class="grid grid-cols-3 gap-1.5">
-                                                <div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Inconnue</div>
-                                                <div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Kayes</div>
-                                                <div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Koulikoro</div>
-                                                <div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Mopti</div>
-                                                <div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Ségou</div>
-                                                <div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Sikasso</div>
-                                            </div>
-                                            <!-- Filtre Sécurité Alimentaire -->
-                                            <div class="bg-white border border-slate-300 rounded p-2.5 space-y-1.5 text-xs text-slate-700">
-                                                <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full border border-slate-400 inline-block"></span> Acceptable</div>
-                                                <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full border border-slate-400 inline-block"></span> Limite</div>
-                                                <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full border border-slate-400 inline-block"></span> Non renseigné</div>
-                                                <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full border border-slate-400 inline-block"></span> Pauvre</div>
+</nav>
+
+
+
+<!-- CTA & Menu Burger Mobile -->
+
+<div class="flex items-center gap-3">
+
+<a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl bg-navy-900 hover:bg-brand-600 text-white text-sm font-medium transition-colors shadow-sm">
+
+Me contacter
+
+</a>
+
+<button id="mobile-menu-btn" type="button" aria-label="Ouvrir le menu" class="md:hidden p-2.5 rounded-xl text-slate-600 hover:text-navy-900 hover:bg-slate-100 transition-colors">
+
+<svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+
+</svg>
+
+<svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+
+</svg>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Menu Mobile Déroulant -->
+
+<div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-2 shadow-lg">
+
+<a href="#projets" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Projets</a>
+
+<a href="#methode" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Méthode</a>
+
+<a href="#parcours" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Parcours</a>
+
+<a href="#competences" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Compétences</a>
+
+<a href="#formation" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Formation</a>
+
+<div class="pt-2">
+
+<a href="#contact" class="mobile-link block w-full text-center px-4 py-3 rounded-xl bg-brand-600 text-white font-medium text-base">
+
+Me contacter
+
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+<!-- =====================================================================
+
+2. SECTION HERO (EN-TÊTE)
+
+====================================================================== -->
+
+<section class="pt-12 pb-16 sm:pt-16 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+
+<!-- Colonne Texte (7 colonnes) -->
+
+<div class="lg:col-span-7 space-y-6">
+
+<!-- Badge disponibilité -->
+
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-medium">
+
+<span class="relative flex h-2.5 w-2.5">
+
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+
+</span>
+
+Disponible pour opportunités · Télétravail & Missions terrain
+
+</div>
+
+
+
+<!-- Titre principal -->
+
+<h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.25rem] text-navy-900 tracking-tight leading-[1.12]">
+
+Je transforme vos données en <span class="text-brand-600">décisions.</span>
+
+</h1>
+
+
+
+<!-- Accroche double profil -->
+
+<p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+
+Titulaire d'un <strong class="text-navy-900 font-semibold">Master en Génie Logiciel</strong> et spécialisé en <strong class="text-navy-900 font-semibold">Suivi-Évaluation (DU GAR GP SE)</strong>, j'allie analyse de données (Python, SQL, Power BI, Excel, Orange Data Mining), collecte terrain (KoboToolbox) et <strong class="text-navy-900 font-semibold">formation Data & IA</strong> pour fiabiliser les décisions et renforcer les équipes.
+
+</p>
+
+
+
+<!-- Badges des postes visés -->
+
+<div class="flex flex-wrap gap-2 pt-1">
+
+<span class="px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium shadow-2xs">Data Analyst</span>
+
+<span class="px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium shadow-2xs">Chargé S&E · MEAL</span>
+
+<span class="px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium shadow-2xs">Développeur Data Pipeline</span>
+
+<span class="px-3 py-1 rounded-lg bg-brand-50 border border-brand-100 text-brand-700 text-xs sm:text-sm font-medium">Formateur Data & IA</span>
+
+</div>
+
+
+
+<!-- Boutons d'action -->
+
+<div class="flex flex-wrap items-center gap-3 pt-2">
+
+<a href="https://wa.me/22378119788?text=Bonjour%20Abdoulaye%2C%20j'ai%20consult%C3%A9%20votre%20portfolio%20et%20je%20souhaiterais%20%C3%A9changer%20avec%20vous." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm transition-all shadow-sm hover:shadow">
+
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+
+WhatsApp · +223 78 11 97 88
+
+</a>
+
+
+
+<a href="tel:+22378119788" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white hover:bg-slate-50 text-navy-900 border border-slate-200 font-medium text-sm transition-colors shadow-2xs">
+
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+
+Appeler
+
+</a>
+
+
+<a href="mailto:abdelraul140385@gmail.com" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white hover:bg-slate-50 text-navy-900 border border-slate-200 font-medium text-sm transition-colors shadow-2xs">
+
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+
+E-mail
+
+</a>
+
+
+
+<a href="https://github.com/abdoulaye1403/Portfolio_Pipeline_Mali" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-medium text-sm transition-colors shadow-2xs">
+
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+
+GitHub
+
+</a>
+
+</div>
+
+
+
+<!-- Infos rapides -->
+
+<div class="pt-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-500 border-t border-slate-200/80">
+
+<span class="inline-flex items-center gap-1.5">
+
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+
+Bamako, Mali · GMT+0
+
+</span>
+
+<span class="inline-flex items-center gap-1.5">
+
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+
+Français · Bambara · Anglais
+
+</span>
+
+</div>
+
+</div>
+
+
+
+<!-- Colonne Carte Portrait (5 colonnes) -->
+
+<div class="lg:col-span-5 flex justify-center lg:justify-end">
+
+<div class="relative w-full max-w-sm">
+
+<!-- Cadre décoratif arrière -->
+
+<div class="absolute -inset-2 bg-gradient-to-tr from-brand-600/15 to-slate-200/60 rounded-3xl blur-sm"></div>
+
+
+<!-- Carte principale portrait -->
+
+<div class="relative bg-white p-4 rounded-3xl border border-slate-200 shadow-lg">
+
+<div class="aspect-[4/5] w-full rounded-2xl bg-slate-100 overflow-hidden relative flex flex-col items-center justify-center border border-slate-200/70">
+
+<!-- Photo de profil en tenue professionnelle cadrée sur le haut -->
+
+<img src="profil.jpg" alt="Portrait professionnel d'Abdoulaye Mahamadou Touré" class="w-full h-full object-cover object-top" onerror="this.style.display='none'; document.getElementById('portrait-placeholder').classList.remove('hidden');">
+
+
+<!-- Fallback élégant si profil.jpg n'est pas encore ajoutée -->
+
+<div id="portrait-placeholder" class="hidden flex flex-col items-center justify-center text-center p-6 w-full h-full bg-gradient-to-b from-slate-100 to-slate-200">
+
+<div class="w-24 h-24 rounded-full bg-navy-900 text-white font-display font-bold text-2xl flex items-center justify-center mb-4 shadow-md">
+
+AT
+
+</div>
+
+<p class="font-display font-bold text-navy-900 text-base">Abdoulaye M. Touré</p>
+
+<p class="text-xs text-slate-500 mt-1">Ajoutez <code class="bg-white px-1.5 py-0.5 rounded border border-slate-300 text-slate-700">profil.jpg</code> à la racine de votre dépôt GitHub</p>
+
+</div>
+
+</div>
+
+
+
+<!-- Légende interne carte -->
+
+<div class="pt-4 pb-1 px-1 flex items-center justify-between">
+
+<div>
+
+<p class="font-display font-bold text-navy-900 text-sm">Abdoulaye Mahamadou Touré</p>
+
+<p class="text-xs text-slate-500">Ingénieur Logiciel & Data Analyst</p>
+
+</div>
+
+<span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">
+
+Mali 🇲🇱
+
+</span>
+
+</div>
+
+</div>
+
+
+
+<!-- Badge flottant -->
+
+<div class="absolute -bottom-4 -left-3 sm:-left-6 bg-navy-900 text-white px-4 py-2.5 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-2.5">
+
+<span class="w-2.5 h-2.5 rounded-full bg-brand-600 ring-4 ring-brand-600/30"></span>
+
+<span class="font-display font-semibold text-xs sm:text-sm tracking-wide">Data · S&E · Formation</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================================
+
+3. BANDEAU OUTILS & ÉCOSYSTÈME
+
+====================================================================== -->
+
+<section class="py-8 bg-white border-y border-slate-200">
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<p class="text-center text-xs font-semibold uppercase tracking-widest text-slate-400 mb-5">
+
+Écosystème technique & outils maîtrisés
+
+</p>
+
+<div class="flex flex-wrap justify-center items-center gap-2.5 sm:gap-3">
+
+<span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">Python (Pandas)</span>
+
+<span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">Power BI</span>
+
+<span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">SQL (PostgreSQL)</span>
+
+<span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">Excel Avancé</span>
+
+<span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">KoboToolbox / XLSForm</span>
+
+<span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">Orange Data Mining</span>
+
+<span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">Git / GitHub</span>
+
+<span class="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-slate-700 font-medium text-xs sm:text-sm">LaTeX</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================================
+
+4. BANDEAU CHIFFRES CLÉS (4 KPI)
+
+====================================================================== -->
+
+<section class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs">
+
+<div class="font-display font-extrabold text-2xl sm:text-3xl text-brand-600">Master & DU</div>
+
+<div class="mt-2 font-semibold text-navy-900 text-sm sm:text-base">Génie Logiciel & S&E</div>
+
+<p class="mt-1 text-xs text-slate-500">Double compétence développement, data & suivi-évaluation</p>
+
+</div>
+
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs">
+
+<div class="font-display font-extrabold text-2xl sm:text-3xl text-navy-900">196</div>
+
+<div class="mt-2 font-semibold text-navy-900 text-sm sm:text-base">Ménages analysés (Mali)</div>
+
+<p class="mt-1 text-xs text-slate-500">Couverture de 5 régions sur la sécurité alimentaire & crédit</p>
+
+</div>
+
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs">
+
+<div class="font-display font-extrabold text-2xl sm:text-3xl text-brand-600">45+</div>
+
+<div class="mt-2 font-semibold text-navy-900 text-sm sm:text-base">Variables KoboToolbox</div>
+
+<p class="mt-1 text-xs text-slate-500">Questionnaires structurés avec contrôles et logiques de saut</p>
+
+</div>
+
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs">
+
+<div class="font-display font-extrabold text-2xl sm:text-3xl text-navy-900">100%</div>
+
+<div class="mt-2 font-semibold text-navy-900 text-sm sm:text-base">Approche terrain & code</div>
+
+<p class="mt-1 text-xs text-slate-500">De la collecte mobile jusqu'au reporting automatisé</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================================
+
+5. SECTION VALEUR AJOUTÉE ("CE QUE J'APPORTE")
+
+====================================================================== -->
+
+<section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+
+<div class="max-w-2xl mb-10">
+
+<span class="text-xs font-bold uppercase tracking-wider text-brand-600">Valeur ajoutée</span>
+
+<h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900">Ce que j'apporte à vos projets</h2>
+
+<p class="mt-2 text-slate-600 text-sm sm:text-base">Une approche rigoureuse qui relie la réalité du terrain aux exigences des décideurs.</p>
+
+</div>
+
+
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+<!-- Carte 1 -->
+
+<div class="bg-white p-7 rounded-2xl border border-slate-200 hover:border-brand-600/40 transition-colors shadow-2xs flex flex-col justify-between">
+
+<div>
+
+<div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
+
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+
+</div>
+
+<h3 class="font-display font-bold text-lg text-navy-900">Des décisions éclairées</h3>
+
+<p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+
+Conception de tableaux de bord interactifs sous Power BI et Excel orientés KPI métier, suivi de cadres logiques et pilotage d'indicateurs en temps réel.
+
+</p>
+
+</div>
+
+<div class="mt-6 pt-4 border-t border-slate-100 text-xs font-medium text-brand-600">
+
+Power BI · DAX · Excel Dynamique
+
+</div>
+
+</div>
+
+
+
+<!-- Carte 2 -->
+
+<div class="bg-white p-7 rounded-2xl border border-slate-200 hover:border-brand-600/40 transition-colors shadow-2xs flex flex-col justify-between">
+
+<div>
+
+<div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
+
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+
+</div>
+
+<h3 class="font-display font-bold text-lg text-navy-900">Des données fiables dès la source</h3>
+
+<p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+
+Structuration de questionnaires numériques sous KoboToolbox et XLSForm intégrant groupes thématiques, contraintes de saisie, calculs et logiques de saut.
+
+</p>
+
+</div>
+
+<div class="mt-6 pt-4 border-t border-slate-100 text-xs font-medium text-brand-600">
+
+KoboToolbox · XLSForm · Contrôle Qualité
+
+</div>
+
+</div>
+
+
+
+<!-- Carte 3 -->
+
+<div id="formation" class="bg-white p-7 rounded-2xl border border-slate-200 hover:border-brand-600/40 transition-colors shadow-2xs flex flex-col justify-between">
+
+<div>
+
+<div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
+
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+
+</div>
+
+<h3 class="font-display font-bold text-lg text-navy-900">Formation Data, IA & Pipelines</h3>
+
+<p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+
+Automatisation des flux sous Python (Pandas) et SQL, modélisation visuelle avec Orange Data Mining, et animation de formations pratiques pour rendre vos équipes autonomes.
+
+</p>
+
+</div>
+
+<div class="mt-6 pt-4 border-t border-slate-100 text-xs font-medium text-brand-600">
+
+Python · Orange Data Mining · Formation
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================================
+
+6. SECTION PROJETS (2 ÉTUDES DE CAS MAJEURES + 3 SECONDAIRES)
+
+====================================================================== -->
+
+<section id="projets" class="py-14 sm:py-20 bg-white border-y border-slate-200">
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<div class="max-w-2xl mb-12">
+
+<span class="text-xs font-bold uppercase tracking-wider text-brand-600">Réalisations & Études de cas</span>
+
+<h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900">Projets Data, S&E & Pipelines</h2>
+
+<p class="mt-2 text-slate-600 text-sm sm:text-base">Des réalisations concrètes construites à partir de données d'enquête et de pipelines reproductibles.</p>
+
+</div>
+
+
+
+<!-- 2 GRANDES ÉTUDES DE CAS -->
+
+<div class="space-y-10 mb-14">
+
+
+
+<!-- Projet Majeur 1 : Rapport de Suivi-Évaluation - Mali (Juin 2026) -->
+
+<article class="bg-[#F8FAFC] rounded-3xl border border-slate-200 overflow-hidden shadow-xs">
+
+<!-- Aperçu visuel du Dashboard Power BI (image réelle + maquette interactive de secours) -->
+
+<div class="relative bg-slate-100 border-b border-slate-200">
+
+<img src="apercu_dashboard_powerbi.png" alt="Rapport de Suivi-Évaluation - Mali (Juin 2026) : 196 ménages, rendement moyen 441,5 kg, taux d'accès au crédit 35,71 %" class="w-full h-auto block" onerror="this.style.display='none'; document.getElementById('dashboard-visual-preview').classList.remove('hidden');">
+
+
+
+<!-- Aperçu visuel fidèle du Dashboard Power BI (affiché automatiquement dans la prévisualisation web) -->
+
+<div id="dashboard-visual-preview" class="hidden p-4 sm:p-6 bg-[#EFEFEF]">
+
+<div class="bg-white rounded-xl border border-slate-300 shadow-sm overflow-hidden">
+
+<!-- En-tête du rapport Power BI -->
+
+<div class="bg-[#E2E2E2] py-2.5 px-4 text-center border-b border-slate-300">
+
+<h4 class="font-display font-bold text-base sm:text-xl text-[#6B1D7B]">
+
+Rapport de Suivi-Évaluation - Mali (Juin 2026)
+
+</h4>
+
+</div>
+
+
+
+<div class="p-3 sm:p-4 grid grid-cols-1 lg:grid-cols-12 gap-3 bg-[#F4F4F4]">
+
+<!-- Panneau Filtres / Segments (Gauche - 3 cols) -->
+
+<div class="lg:col-span-3 space-y-2.5">
+
+<!-- Filtre Genre -->
+
+<div class="grid grid-cols-2 gap-1.5">
+
+<div class="bg-white border border-slate-300 rounded px-2.5 py-2 text-xs font-medium text-slate-700 shadow-2xs">Femme</div>
+
+<div class="bg-white border border-slate-300 rounded px-2.5 py-2 text-xs font-medium text-slate-700 shadow-2xs">Homme</div>
+
+</div>
+
+<!-- Filtre Régions -->
+
+<div class="grid grid-cols-3 gap-1.5">
+
+<div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Inconnue</div>
+
+<div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Kayes</div>
+
+<div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Koulikoro</div>
+
+<div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Mopti</div>
+
+<div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Ségou</div>
+
+<div class="bg-white border border-slate-300 rounded px-2 py-2 text-[11px] font-medium text-slate-700 truncate">Sikasso</div>
+
+</div>
+
+<!-- Filtre Sécurité Alimentaire -->
+
+<div class="bg-white border border-slate-300 rounded p-2.5 space-y-1.5 text-xs text-slate-700">
+<div class="flex items-center gap-2"><span class="w-3 h-3 rounded-xs border border-slate-400 inline-block"></span><span>Sécurité alimentaire</span></div>
+                                                <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-xs border border-slate-400 inline-block"></span><span>Insécurité alimentaire modérée</span></div>
+                                                <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-xs border border-slate-400 inline-block"></span><span>Insécurité alimentaire sévère</span></div>
                                             </div>
                                         </div>
 
-                                        <!-- Zone Principale KPI & Graphiques (Droite - 9 cols) -->
+                                        <!-- Zone KPI & Graphiques (Droite - 9 cols) -->
                                         <div class="lg:col-span-9 space-y-3">
-                                            <!-- 4 Cartes KPI Power BI -->
-                                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                                                <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-2xs">
-                                                    <div class="font-display font-bold text-xl sm:text-2xl text-slate-900">196</div>
-                                                    <div class="text-[11px] text-slate-500 mt-0.5 truncate">Total_Menages</div>
+                                            <!-- 3 Cartes KPI -->
+                                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                                                <div class="bg-[#E6EEF8] border border-slate-300 rounded-lg p-3 text-center">
+                                                    <div class="text-[11px] font-semibold text-slate-700">Nombre de ménages</div>
+                                                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-[#1D4ED8] mt-1">196</div>
                                                 </div>
-                                                <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-2xs">
-                                                    <div class="font-display font-bold text-xl sm:text-2xl text-slate-900">1K</div>
-                                                    <div class="text-[11px] text-slate-500 mt-0.5 truncate">Somme de Taille_Mena...</div>
+                                                <div class="bg-[#E6EEF8] border border-slate-300 rounded-lg p-3 text-center">
+                                                    <div class="text-[11px] font-semibold text-slate-700">Rendement moyen (kg)</div>
+                                                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-[#1D4ED8] mt-1">441,5</div>
                                                 </div>
-                                                <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-2xs">
-                                                    <div class="font-display font-bold text-xl sm:text-2xl text-slate-900">441,5</div>
-                                                    <div class="text-[11px] text-slate-500 mt-0.5 truncate">Rendement_Moyen_...</div>
-                                                </div>
-                                                <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-2xs">
-                                                    <div class="font-display font-bold text-xl sm:text-2xl text-slate-900">35,71 %</div>
-                                                    <div class="text-[11px] text-slate-500 mt-0.5 truncate">Taux_Acce_Credit</div>
+                                                <div class="bg-[#E6EEF8] border border-slate-300 rounded-lg p-3 text-center">
+                                                    <div class="text-[11px] font-semibold text-slate-700">Taux d'accès au crédit (%)</div>
+                                                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-[#1D4ED8] mt-1">35,71 %</div>
                                                 </div>
                                             </div>
 
-                                            <!-- 2 Graphiques Centraux -->
-                                            <div class="grid grid-cols-1 md:grid-cols-12 gap-2.5">
-                                                <!-- Graphique Barres Groupées par Région -->
-                                                <div class="md:col-span-7 bg-white p-3 rounded-lg border border-slate-200 shadow-2xs">
-                                                    <div class="text-center font-semibold text-xs text-slate-800 mb-2">
-                                                        Total_Menages par Region et Categorie_Securite_Alimentaire
+                                            <!-- Graphiques inférieurs -->
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                                                <div class="bg-white border border-slate-300 rounded-lg p-3">
+                                                    <div class="text-xs font-semibold text-slate-800 mb-2">Rendement moyen par région</div>
+                                                    <div class="space-y-1.5 text-[11px] text-slate-700">
+                                                        <div class="flex items-center gap-2">
+                                                            <span class="w-16 text-right shrink-0">Ségou</span>
+                                                            <div class="h-3.5 bg-[#3B82F6] rounded-xs" style="width: 85%;"></div>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <span class="w-16 text-right shrink-0">Sikasso</span>
+                                                            <div class="h-3.5 bg-[#3B82F6] rounded-xs" style="width: 72%;"></div>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <span class="w-16 text-right shrink-0">Koulikoro</span>
+                                                            <div class="h-3.5 bg-[#3B82F6] rounded-xs" style="width: 60%;"></div>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <span class="w-16 text-right shrink-0">Mopti</span>
+                                                            <div class="h-3.5 bg-[#3B82F6] rounded-xs" style="width: 45%;"></div>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <span class="w-16 text-right shrink-0">Kayes</span>
+                                                            <div class="h-3.5 bg-[#3B82F6] rounded-xs" style="width: 38%;"></div>
+                                                        </div>
                                                     </div>
-                                                    <div class="flex flex-wrap justify-center gap-3 text-[10px] text-slate-600 mb-2">
-                                                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#118DFF]"></span>Acceptable</span>
-                                                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#12239E]"></span>Limite</span>
-                                                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#E66C37]"></span>Non renseigné</span>
-                                                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#6B007B]"></span>Pauvre</span>
-                                                    </div>
-                                                    <!-- Histogramme SVG reproduisant les valeurs exactes -->
-                                                    <svg viewBox="0 0 360 135" class="w-full h-36">
-                                                        <line x1="25" y1="112" x2="350" y2="112" stroke="#E2E8F0" stroke-width="1"/>
-                                                        <line x1="25" y1="76" x2="350" y2="76" stroke="#F1F5F9" stroke-dasharray="2,2"/>
-                                                        <line x1="25" y1="40" x2="350" y2="40" stroke="#F1F5F9" stroke-dasharray="2,2"/>
-                                                        <text x="18" y="115" font-size="8" fill="#64748B" text-anchor="end">0</text>
-                                                        <text x="18" y="79" font-size="8" fill="#64748B" text-anchor="end">10</text>
-                                                        <text x="18" y="43" font-size="8" fill="#64748B" text-anchor="end">20</text>
-
-                                                        <!-- Mopti: 18, 25, 5, 6 -->
-                                                        <rect x="34" y="47" width="8" height="65" fill="#118DFF"/><text x="38" y="44" font-size="7" fill="#334155" text-anchor="middle">18</text>
-                                                        <rect x="43" y="22" width="8" height="90" fill="#12239E"/><text x="47" y="19" font-size="7" fill="#334155" text-anchor="middle">25</text>
-                                                        <rect x="52" y="94" width="8" height="18" fill="#E66C37"/><text x="56" y="91" font-size="7" fill="#334155" text-anchor="middle">5</text>
-                                                        <rect x="61" y="90" width="8" height="22" fill="#6B007B"/><text x="65" y="87" font-size="7" fill="#334155" text-anchor="middle">6</text>
-                                                        <text x="51" y="124" font-size="8" fill="#334155" text-anchor="middle">Mopti</text>
-
-                                                        <!-- Sikasso: 11, 19, 4, 5 -->
-                                                        <rect x="88" y="72" width="8" height="40" fill="#118DFF"/><text x="92" y="69" font-size="7" fill="#334155" text-anchor="middle">11</text>
-                                                        <rect x="97" y="44" width="8" height="68" fill="#12239E"/><text x="101" y="41" font-size="7" fill="#334155" text-anchor="middle">19</text>
-                                                        <rect x="106" y="98" width="8" height="14" fill="#E66C37"/><text x="110" y="95" font-size="7" fill="#334155" text-anchor="middle">4</text>
-                                                        <rect x="115" y="94" width="8" height="18" fill="#6B007B"/><text x="119" y="91" font-size="7" fill="#334155" text-anchor="middle">5</text>
-                                                        <text x="105" y="124" font-size="8" fill="#334155" text-anchor="middle">Sikasso</text>
-
-                                                        <!-- Kayes: 13, 15, 2, 3 -->
-                                                        <rect x="142" y="65" width="8" height="47" fill="#118DFF"/><text x="146" y="62" font-size="7" fill="#334155" text-anchor="middle">13</text>
-                                                        <rect x="151" y="58" width="8" height="54" fill="#12239E"/><text x="155" y="55" font-size="7" fill="#334155" text-anchor="middle">15</text>
-                                                        <rect x="160" y="105" width="8" height="7" fill="#E66C37"/><text x="164" y="102" font-size="7" fill="#334155" text-anchor="middle">2</text>
-                                                        <rect x="169" y="101" width="8" height="11" fill="#6B007B"/><text x="173" y="98" font-size="7" fill="#334155" text-anchor="middle">3</text>
-                                                        <text x="159" y="124" font-size="8" fill="#334155" text-anchor="middle">Kayes</text>
-
-                                                        <!-- Ségou: 16, 14, 1, 2 -->
-                                                        <rect x="196" y="54" width="8" height="58" fill="#118DFF"/><text x="200" y="51" font-size="7" fill="#334155" text-anchor="middle">16</text>
-                                                        <rect x="205" y="62" width="8" height="50" fill="#12239E"/><text x="209" y="59" font-size="7" fill="#334155" text-anchor="middle">14</text>
-                                                        <rect x="214" y="108" width="8" height="4" fill="#E66C37"/><text x="218" y="105" font-size="7" fill="#334155" text-anchor="middle">1</text>
-                                                        <rect x="223" y="105" width="8" height="7" fill="#6B007B"/><text x="227" y="102" font-size="7" fill="#334155" text-anchor="middle">2</text>
-                                                        <text x="213" y="124" font-size="8" fill="#334155" text-anchor="middle">Ségou</text>
-
-                                                        <!-- Koulikoro: 5, 19, 0, 2 -->
-                                                        <rect x="250" y="94" width="8" height="18" fill="#118DFF"/><text x="254" y="91" font-size="7" fill="#334155" text-anchor="middle">5</text>
-                                                        <rect x="259" y="44" width="8" height="68" fill="#12239E"/><text x="263" y="41" font-size="7" fill="#334155" text-anchor="middle">19</text>
-                                                        <rect x="277" y="105" width="8" height="7" fill="#6B007B"/><text x="281" y="102" font-size="7" fill="#334155" text-anchor="middle">2</text>
-                                                        <text x="267" y="124" font-size="8" fill="#334155" text-anchor="middle">Koulikoro</text>
-
-                                                        <!-- Inconnue: 2, 8, 1 -->
-                                                        <rect x="304" y="105" width="8" height="7" fill="#118DFF"/><text x="308" y="102" font-size="7" fill="#334155" text-anchor="middle">2</text>
-                                                        <rect x="313" y="83" width="8" height="29" fill="#12239E"/><text x="317" y="80" font-size="7" fill="#334155" text-anchor="middle">8</text>
-                                                        <rect x="322" y="108" width="8" height="4" fill="#E66C37"/><text x="326" y="105" font-size="7" fill="#334155" text-anchor="middle">1</text>
-                                                        <text x="317" y="124" font-size="8" fill="#334155" text-anchor="middle">Inconnue</text>
-                                                    </svg>
                                                 </div>
 
-                                                <!-- Graphique Anneau Taux_Acce_Credit par Genre_Chef -->
-                                                <div class="md:col-span-5 bg-white p-3 rounded-lg border border-slate-200 shadow-2xs flex flex-col justify-between">
-                                                    <div class="text-center font-semibold text-xs text-slate-800">
-                                                        Taux_Acce_Credit par Genre_Chef
-                                                    </div>
-                                                    <div class="flex items-center justify-center gap-3 my-auto py-2">
-                                                        <svg viewBox="0 0 120 120" class="w-28 h-28 shrink-0">
-                                                            <circle cx="60" cy="60" r="42" fill="none" stroke="#12239E" stroke-width="18"/>
-                                                            <circle cx="60" cy="60" r="42" fill="none" stroke="#118DFF" stroke-width="18" stroke-dasharray="143.8 263.9" transform="rotate(-90 60 60)"/>
-                                                        </svg>
-                                                        <div class="space-y-2 text-[11px] text-slate-700">
-                                                            <div>
-                                                                <div class="font-bold text-slate-900">Genre_Chef</div>
-                                                            </div>
-                                                            <div class="flex items-center gap-1.5">
-                                                                <span class="w-2.5 h-2.5 rounded-full bg-[#118DFF]"></span>
-                                                                <span>Femme (54,48 %)</span>
-                                                            </div>
-                                                            <div class="flex items-center gap-1.5">
-                                                                <span class="w-2.5 h-2.5 rounded-full bg-[#12239E]"></span>
-                                                                <span>Homme (45,52 %)</span>
-                                                            </div>
+                                                <div class="bg-white border border-slate-300 rounded-lg p-3">
+                                                    <div class="text-xs font-semibold text-slate-800 mb-2">Répartition par sécurité alimentaire</div>
+                                                    <div class="space-y-2 text-[11px] text-slate-700 pt-1">
+                                                        <div>
+                                                            <div class="flex justify-between mb-0.5"><span>Sécurité alimentaire</span><span>48%</span></div>
+                                                            <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full" style="width: 48%;"></div></div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="flex justify-between mb-0.5"><span>Insécurité modérée</span><span>34%</span></div>
+                                                            <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden"><div class="bg-amber-500 h-full" style="width: 34%;"></div></div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="flex justify-between mb-0.5"><span>Insécurité sévère</span><span>18%</span></div>
+                                                            <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden"><div class="bg-rose-500 h-full" style="width: 18%;"></div></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <!-- Graphique Nuage de Points Inférieur (12 cols) -->
-                                        <div class="lg:col-span-12 bg-white p-3 rounded-lg border border-slate-200 shadow-2xs">
-                                            <div class="text-center font-semibold text-xs text-slate-800 mb-1">
-                                                Somme de Superficie_Ha et Somme de Rendement_Kg par Region
-                                            </div>
-                                            <svg viewBox="0 0 600 75" class="w-full h-16">
-                                                <line x1="35" y1="58" x2="585" y2="58" stroke="#E2E8F0"/>
-                                                <text x="28" y="25" font-size="8" fill="#64748B" text-anchor="end">50K</text>
-                                                <text x="28" y="60" font-size="8" fill="#64748B" text-anchor="end">0K</text>
-                                                <text x="105" y="70" font-size="8" fill="#64748B" text-anchor="middle">50</text>
-                                                <text x="235" y="70" font-size="8" fill="#64748B" text-anchor="middle">100</text>
-                                                <text x="365" y="70" font-size="8" fill="#64748B" text-anchor="middle">150</text>
-                                                <text x="495" y="70" font-size="8" fill="#64748B" text-anchor="middle">200</text>
-
-                                                <circle cx="80" cy="46" r="4" fill="#8B5CF6"/><text x="80" y="55" font-size="8" fill="#475569" text-anchor="middle">Inconnue</text>
-                                                <circle cx="215" cy="36" r="4" fill="#EC4899"/><text x="215" y="46" font-size="8" fill="#475569" text-anchor="middle">Koulikoro</text>
-                                                <circle cx="315" cy="24" r="4" fill="#F97316"/><text x="315" y="34" font-size="8" fill="#475569" text-anchor="middle">Kayes</text>
-                                                <circle cx="330" cy="34" r="4" fill="#2563EB"/><text x="330" y="44" font-size="8" fill="#475569" text-anchor="middle">Sikasso</text>
-                                                <circle cx="365" cy="40" r="4" fill="#7E22CE"/><text x="365" y="50" font-size="8" fill="#475569" text-anchor="middle">Ségou</text>
-                                                <circle cx="560" cy="14" r="4.5" fill="#0EA5E9"/><text x="560" y="24" font-size="8" font-weight="bold" fill="#0F172A" text-anchor="middle">Mopti</text>
-                                            </svg>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <span class="hidden sm:inline-flex items-center gap-1.5 absolute bottom-4 right-4 px-3.5 py-1.5 rounded-full bg-navy-900/90 text-white text-xs font-semibold shadow-md backdrop-blur-xs">
-                                Dashboard Power BI · Juin 2026
-                            </span>
                         </div>
 
-                        <!-- Contenu détaillé de l'étude de cas -->
-                        <div class="p-6 sm:p-8 lg:p-10">
-                            <div class="flex flex-wrap items-center gap-2 mb-4">
-                                <span class="px-2.5 py-1 rounded-md bg-brand-600 text-white text-xs font-semibold">Étude de cas phare #01</span>
-                                <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-600 text-xs font-medium">Power BI</span>
-                                <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-600 text-xs font-medium">DAX</span>
-                                <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-600 text-xs font-medium">Suivi-Évaluation (MEAL)</span>
-                                <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-600 text-xs font-medium">Analyse agricole · Mali</span>
+                        <div class="p-6 sm:p-8">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold">Power BI · Suivi-Évaluation (MEAL)</span>
+                                <span class="text-xs text-slate-500 font-medium">Juin 2026 · Mali</span>
                             </div>
-
                             <h3 class="font-display font-bold text-xl sm:text-2xl text-navy-900">
-                                Rapport de Suivi-Évaluation — Mali (Juin 2026)
+                                Rapport de Suivi-Évaluation — Sécurité Alimentaire, Rendement &amp; Accès au Crédit
                             </h3>
-                            <p class="mt-2.5 text-sm sm:text-base text-slate-600 leading-relaxed max-w-4xl">
-                                Tableau de bord interactif permettant le suivi de <strong class="text-navy-900">196 ménages</strong> répartis sur 5 régions du Mali (<strong class="text-navy-900">Mopti, Sikasso, Kayes, Ségou, Koulikoro</strong>) avec filtres dynamiques par genre du chef de ménage, région et catégorie de sécurité alimentaire.
+                            <p class="mt-2.5 text-sm sm:text-base text-slate-600 leading-relaxed">
+                                Tableau de bord interactif consolidant les données de <strong>196 ménages</strong> sur plusieurs régions du Mali avec filtres dynamiques (genre, région, niveau de sécurité alimentaire), suivi du rendement moyen (<strong>441,5 kg</strong>) et du taux d'accès au crédit (<strong>35,71 %</strong>).
                             </p>
-
-                            <!-- Trame en 3 temps -->
-                            <div class="mt-6 pt-6 border-t border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-600 leading-relaxed">
-                                <div class="bg-white p-5 rounded-2xl border border-slate-200/80">
-                                    <h4 class="font-display font-bold text-navy-900 text-base mb-2 flex items-center gap-2">
-                                        <span class="w-2 h-2 rounded-full bg-brand-600"></span>
-                                        La question
-                                    </h4>
-                                    <p>
-                                        Quelle est la situation de la sécurité alimentaire, de l'accès au crédit et des rendements agricoles des ménages suivis par région et selon le genre du chef de ménage ?
-                                    </p>
-                                </div>
-
-                                <div class="bg-white p-5 rounded-2xl border border-slate-200/80">
-                                    <h4 class="font-display font-bold text-navy-900 text-base mb-2 flex items-center gap-2">
-                                        <span class="w-2 h-2 rounded-full bg-navy-900"></span>
-                                        Ce que j'ai construit
-                                    </h4>
-                                    <ul class="space-y-1.5 list-disc pl-4">
-                                        <li>Indicateurs clés (KPI) dynamiques et mesures DAX de taux d'accès au crédit et de rendement moyen.</li>
-                                        <li>Segmentation croisée par région et sécurité alimentaire (Acceptable, Limite, Pauvre).</li>
-                                        <li>Analyse comparative de l'accès au crédit selon le genre et corrélation superficie / rendement.</li>
-                                    </ul>
-                                </div>
-
-                                <div class="bg-white p-5 rounded-2xl border border-slate-200/80">
-                                    <h4 class="font-display font-bold text-navy-900 text-base mb-2 flex items-center gap-2">
-                                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                                        Ce que montrent les données
-                                    </h4>
-                                    <ul class="space-y-1.5 list-disc pl-4">
-                                        <li><strong>Mopti</strong> concentre le plus grand volume de ménages suivis (54 ménages) et la plus forte production cumulée.</li>
-                                        <li>La catégorie <strong>Limite</strong> prédomine dans la majorité des régions (25 à Mopti, 19 à Sikasso et Koulikoro).</li>
-                                        <li>Les femmes chefs de ménage représentent <strong>54,48 %</strong> de l'accès au crédit contre <strong>45,52 %</strong> pour les hommes.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Bandeau des 4 chiffres clés extraits du dashboard -->
-                            <div class="mt-6 pt-6 border-t border-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                                <div class="bg-white p-4 rounded-xl border border-slate-200/80">
-                                    <div class="font-display font-extrabold text-xl sm:text-2xl text-navy-900">196</div>
-                                    <div class="text-xs text-slate-500 mt-0.5">ménages suivis</div>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border border-slate-200/80">
-                                    <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-600">~1 000</div>
-                                    <div class="text-xs text-slate-500 mt-0.5">personnes couvertes</div>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border border-slate-200/80">
-                                    <div class="font-display font-extrabold text-xl sm:text-2xl text-navy-900">441,5 kg</div>
-                                    <div class="text-xs text-slate-500 mt-0.5">rendement moyen</div>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border border-slate-200/80">
-                                    <div class="font-display font-extrabold text-xl sm:text-2xl text-emerald-600">35,71 %</div>
-                                    <div class="text-xs text-slate-500 mt-0.5">taux d'accès au crédit</div>
-                                </div>
+                            <div class="mt-5 flex flex-wrap gap-3">
+                                <a href="https://github.com/abdoulaye1403/Portfolio_Pipeline_Mali" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-navy-900 hover:bg-brand-600 text-white text-xs sm:text-sm font-medium transition-colors">
+                                    Voir le dépôt sur GitHub
+                                </a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Projet Majeur 2 : Portfolio Data Pipeline Mali -->
-                    <article class="bg-[#F8FAFC] rounded-3xl border border-slate-200 overflow-hidden shadow-xs">
-                        <div class="grid grid-cols-1 lg:grid-cols-12">
-                            <!-- Colonne Détails (7 cols) -->
-                            <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
-                                <div>
-                                    <div class="flex flex-wrap items-center gap-2 mb-4">
-                                        <span class="px-2.5 py-1 rounded-md bg-navy-900 text-white text-xs font-semibold">Étude de cas #02</span>
-                                        <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-600 text-xs font-medium">Python</span>
-                                        <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-600 text-xs font-medium">Pandas</span>
-                                        <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-600 text-xs font-medium">SQL</span>
-                                        <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-600 text-xs font-medium">ETL</span>
-                                    </div>
-
-                                    <h3 class="font-display font-bold text-xl sm:text-2xl text-navy-900">
-                                        Portfolio Data Pipeline Mali — Automatisation ETL
-                                    </h3>
-
-                                    <div class="mt-5 space-y-4 text-sm text-slate-600 leading-relaxed">
-                                        <div>
-                                            <span class="font-bold text-navy-900">La question :</span> Comment fiabiliser, fusionner et nettoyer rapidement des fichiers d'enquêtes et bases relationnelles hétérogènes (doublons, formats de dates incohérents, valeurs manquantes) avant leur exploitation analytique ?
-                                        </div>
-                                        <div>
-                                            <span class="font-bold text-navy-900">Ce que j'ai construit :</span> Un pipeline ETL modulaire en Python (Pandas) couplé à des requêtes SQL d'extraction et de contrôle d'intégrité. Le script automatise la normalisation des types, la détection d'anomalies et l'export vers un entrepôt prêt pour la BI.
-                                        </div>
-                                        <div>
-                                            <span class="font-bold text-navy-900">Ce que montrent les données :</span> Réduction drastique du temps de préparation manuelle, traçabilité complète des rejets de qualité et génération automatique de tables agrégées sans erreur de manipulation.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Métriques clés -->
-                                <div class="mt-6 pt-5 border-t border-slate-200 grid grid-cols-3 gap-4">
-                                    <div>
-                                        <div class="font-display font-bold text-lg sm:text-xl text-brand-600">-80%</div>
-                                        <div class="text-xs text-slate-500">Temps de nettoyage</div>
-                                    </div>
-                                    <div>
-                                        <div class="font-display font-bold text-lg sm:text-xl text-navy-900">100%</div>
-                                        <div class="text-xs text-slate-500">Contrôles automatisés</div>
-                                    </div>
-                                    <div>
-                                        <div class="font-display font-bold text-lg sm:text-xl text-navy-900">Reproductible</div>
-                                        <div class="text-xs text-slate-500">Architecture modulaire</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Colonne Maquette Visuelle SVG/CSS (5 cols) -->
-                            <div class="lg:col-span-5 bg-navy-900 p-6 sm:p-8 flex flex-col justify-center relative overflow-hidden">
-                                <div class="text-xs font-mono text-slate-400 mb-3 flex items-center justify-between">
-                                    <span>pipeline_etl.py · Architecture</span>
-                                    <span class="text-emerald-400">● Exécuté avec succès</span>
-                                </div>
-                                
-                                <!-- Maquette visuelle Pipeline ETL -->
-                                <div class="bg-navy-800/90 border border-slate-700 rounded-2xl p-4 space-y-3 font-mono text-xs text-slate-200 shadow-inner">
-                                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-navy-900/80 border border-slate-700/80">
-                                        <span class="text-sky-400 font-semibold">01. EXTRACT</span>
-                                        <span class="text-slate-400">CSV / Excel / PostgreSQL</span>
-                                    </div>
-                                    <div class="flex justify-center text-slate-500">↓</div>
-                                    <div class="p-3 rounded-xl bg-navy-900/80 border border-brand-600/50 space-y-1.5">
-                                        <div class="flex items-center justify-between">
-                                            <span class="text-amber-400 font-semibold">02. TRANSFORM (Pandas)</span>
-                                            <span class="text-[10px] px-1.5 py-0.5 rounded bg-brand-600/20 text-brand-100">Clean</span>
-                                        </div>
-                                        <div class="text-[11px] text-slate-400">• Déduplication & typage dates/nombres</div>
-                                        <div class="text-[11px] text-slate-400">• Imputation & règles de cohérence</div>
-                                    </div>
-                                    <div class="flex justify-center text-slate-500">↓</div>
-                                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-emerald-950/50 border border-emerald-700/50">
-                                        <span class="text-emerald-400 font-semibold">03. LOAD & KPI</span>
-                                        <span class="text-emerald-200">Dataset BI prêt</span>
-                                    </div>
-                                </div>
-
-                                <div class="mt-5 flex justify-end">
-                                    <a href="https://github.com/abdoulaye1403/Portfolio_Pipeline_Mali" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-medium text-white hover:text-brand-100 underline underline-offset-4">
-                                        Consulter le dépôt GitHub Portfolio_Pipeline_Mali →
-                                    </a>
-                                </div>
-                            </div>
+                    <!-- Projet Majeur 2 : Pipeline ETL & Analyse Microfinance (Python / Pandas) -->
+                    <article class="bg-[#F8FAFC] rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-xs">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold">Python · Pandas · NumPy · ETL</span>
+                            <span class="text-xs text-slate-500 font-medium">Pipeline reproductible · XOF</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl sm:text-2xl text-navy-900">
+                            Pipeline ETL &amp; Analyse de Portefeuille Microfinance (<code>finance-etl-analytics</code>)
+                        </h3>
+                        <p class="mt-2.5 text-sm sm:text-base text-slate-600 leading-relaxed">
+                            Automatisation du nettoyage, de l'imputation des valeurs manquantes (secteur, région, âge médian) et de la déduplication des données de prêts en microfinance, accompagnée du calcul du <strong>taux de remboursement</strong>, de l'<strong>encours restant dû</strong>, de l'indicateur <strong>PAR 90</strong> (<em>Portfolio at Risk &gt; 90 jours</em>) et de la segmentation par tranche d'âge.
+                        </p>
+                        <div class="mt-5 flex flex-wrap gap-3">
+                            <a href="https://github.com/abdoulaye1403/finance-etl-analytics" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-navy-900 hover:bg-brand-600 text-white text-xs sm:text-sm font-medium transition-colors">
+                                Explorer <code>finance-etl-analytics</code>
+                            </a>
                         </div>
                     </article>
 
                 </div>
 
-                <!-- 3 PROJETS SECONDAIRES EN GRILLE -->
-                <div>
-                    <h3 class="font-display font-bold text-lg text-navy-900 mb-5">Autres réalisations & outils</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        
-                        <!-- Projet Secondaire 1 -->
-                        <div class="bg-[#F8FAFC] p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
-                            <div>
-                                <div class="flex flex-wrap gap-1.5 mb-3">
-                                    <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-600">KoboToolbox</span>
-                                    <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-600">XLSForm</span>
-                                </div>
-                                <h4 class="font-display font-bold text-base text-navy-900">Enquête Ménages (EVAL_Abdoulaye_Touare)</h4>
-                                <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                    Conception et déploiement d'un formulaire d'évaluation terrain (Identification, Eau, Hygiène, Alimentation, Revenus, Géolocalisation) avec groupes thématiques, contraintes de validation et logiques de saut (<code class="text-xs bg-white px-1 rounded border border-slate-200">relevant</code>).
-                                </p>
-                            </div>
-                            <div class="mt-4 pt-3 border-t border-slate-200/80 text-xs font-semibold text-navy-900">
-                                Collecte mobile Enketo / KoboCollect
-                            </div>
-                        </div>
+                <!-- 3 PROJETS SECONDAIRES / COMPLÉMENTAIRES -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                        <!-- Projet Secondaire 2 -->
-                        <div class="bg-[#F8FAFC] p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
-                            <div>
-                                <div class="flex flex-wrap gap-1.5 mb-3">
-                                    <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-600">Google Sheets</span>
-                                    <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-600">Excel Avancé</span>
-                                </div>
-                                <h4 class="font-display font-bold text-base text-navy-900">Analyse & Nettoyage Google Sheets / Excel</h4>
-                                <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                    Nettoyage de bases d'enquêtes terrain, conversion de types avec <code class="text-xs bg-white px-1 rounded border border-slate-200">CNUM</code>, croisements dynamiques (<code class="text-xs bg-white px-1 rounded border border-slate-200">RECHERCHEX</code>, TCD) et contrôles de cohérence multi-feuilles.
-                                </p>
-                            </div>
-                            <div class="mt-4 pt-3 border-t border-slate-200/80 text-xs font-semibold text-navy-900">
-                                Reporting rapide & Audit de qualité
-                            </div>
+                    <!-- Projet Secondaire 1 : SQL Microfinance Risk -->
+                    <article class="bg-[#F8FAFC] p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-semibold text-brand-600 mb-2">SQL · PostgreSQL · Risque Crédit</div>
+                            <h3 class="font-display font-bold text-lg text-navy-900">Modélisation SQL &amp; Suivi PAR 90</h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Schéma relationnel (<code>clients</code>, <code>prets</code>, <code>remboursements</code>) avec règles métier, vue consolidée <code>vue_suivi_prets</code>, classements <code>RANK()</code> et audit qualité.
+                            </p>
                         </div>
-
-                        <!-- Projet Secondaire 3 -->
-                        <div class="bg-[#F8FAFC] p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
-                            <div>
-                                <div class="flex flex-wrap gap-1.5 mb-3">
-                                    <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-600">Orange Data Mining</span>
-                                    <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-600">Machine Learning</span>
-                                </div>
-                                <h4 class="font-display font-bold text-base text-navy-900">Modélisation Visuelle IA & Prétraitement</h4>
-                                <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                    Construction de workflows d'analyse prédictive et de segmentation sous Orange Data Mining (prétraitement avec le widget <code class="text-xs bg-white px-1 rounded border border-slate-200">Preprocess</code>, discrétisation, imputation et classification) pour des publics non-codeurs.
-                                </p>
-                            </div>
-                            <div class="mt-4 pt-3 border-t border-slate-200/80 text-xs font-semibold text-navy-900">
-                                IA appliquée & Pédagogie sans code
-                            </div>
+                        <div class="mt-5 pt-3 border-t border-slate-200/70">
+                            <a href="https://github.com/abdoulaye1403/sql-microfinance-risk" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-600 hover:text-brand-700">
+                                Voir <code>sql-microfinance-risk</code> →
+                            </a>
                         </div>
+                    </article>
 
-                    </div>
+                    <!-- Projet Secondaire 2 : Collecte KoboToolbox / XLSForm -->
+                    <article class="bg-[#F8FAFC] p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-semibold text-brand-600 mb-2">KoboToolbox · XLSForm · S&amp;E</div>
+                            <h3 class="font-display font-bold text-lg text-navy-900">Collecte Mobile &amp; Contrôle Qualité</h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Conception de formulaires structurés (45+ variables) avec contraintes de saisie, calculs automatiques et pertinences pour fiabiliser les enquêtes terrain.
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-200/70">
+                            <a href="https://github.com/abdoulaye1403/Portfolio_Pipeline_Mali" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-600 hover:text-brand-700">
+                                Voir le workflow S&amp;E →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projet Secondaire 3 : Conception Pédagogique & Data -->
+                    <article class="bg-[#F8FAFC] p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-semibold text-brand-600 mb-2">Formation · Mathématiques · Data</div>
+                            <h3 class="font-display font-bold text-lg text-navy-900">Supports Pédagogiques &amp; Atelier Data</h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Élaboration de ressources structurées, exercices pratiques et accompagnement d'apprenants sur l'analyse de données, les statistiques et les outils numériques.
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-200/70">
+                            <a href="#contact" class="text-xs font-semibold text-brand-600 hover:text-brand-700">
+                                Demander une session →
+                            </a>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
 
         <!-- =====================================================================
-             7. SECTION MÉTHODE EN 4 ÉTAPES
+7. SECTION MÉTHODE
         ====================================================================== -->
         <section id="methode" class="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-            <div class="max-w-2xl mb-12">
-                <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Démarche de travail</span>
-                <h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900">Ma méthode en 4 étapes</h2>
-                <p class="mt-2 text-slate-600 text-sm sm:text-base">Un processus structuré pour garantir des résultats exploitables à chaque mission.</p>
+            <div class="max-w-2xl mb-10">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Méthodologie</span>
+                <h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900">Comment je travaille</h2>
+                <p class="mt-2 text-slate-600 text-sm sm:text-base">Un processus clair en 4 étapes, de la définition du besoin jusqu'à l'appropriation par vos équipes.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Étape 01 -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs relative">
-                    <span class="font-display font-extrabold text-3xl text-brand-600/20">01</span>
-                    <h3 class="mt-2 font-display font-bold text-lg text-navy-900">Comprendre</h3>
-                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-                        Cadrage des besoins métier, analyse du cadre logique et définition précise des indicateurs clés (KPI) à mesurer.
-                    </p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <span class="font-display font-extrabold text-2xl text-brand-600">01</span>
+                    <h3 class="mt-3 font-display font-bold text-base text-navy-900">Cadrage &amp; Indicateurs</h3>
+                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Clarification des objectifs métier, des cadres de résultats et des KPI prioritaires.</p>
                 </div>
-
-                <!-- Étape 02 -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs relative">
-                    <span class="font-display font-extrabold text-3xl text-brand-600/20">02</span>
-                    <h3 class="mt-2 font-display font-bold text-lg text-navy-900">Collecter</h3>
-                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-                        Déploiement de formulaires KoboToolbox sécurisés, requêtage de bases SQL ou consolidation de fichiers terrain.
-                    </p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <span class="font-display font-extrabold text-2xl text-brand-600">02</span>
+                    <h3 class="mt-3 font-display font-bold text-base text-navy-900">Collecte &amp; Nettoyage</h3>
+                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Structuration KoboToolbox ou pipelines Python/SQL pour éliminer doublons et anomalies.</p>
                 </div>
-
-                <!-- Étape 03 -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs relative">
-                    <span class="font-display font-extrabold text-3xl text-brand-600/20">03</span>
-                    <h3 class="mt-2 font-display font-bold text-lg text-navy-900">Analyser</h3>
-                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-                        Nettoyage, croisement statistique et modélisation avec Python (Pandas), Power Query, DAX et Excel avancé.
-                    </p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <span class="font-display font-extrabold text-2xl text-brand-600">03</span>
+                    <h3 class="mt-3 font-display font-bold text-base text-navy-900">Analyse &amp; Restitution</h3>
+                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Calcul des indicateurs clés et création de tableaux de bord lisibles sous Power BI ou Excel.</p>
                 </div>
-
-                <!-- Étape 04 -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs relative">
-                    <span class="font-display font-extrabold text-3xl text-brand-600/20">04</span>
-                    <h3 class="mt-2 font-display font-bold text-lg text-navy-900">Recommander & Former</h3>
-                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-                        Restitution via tableaux de bord Power BI, notes de synthèse et formation des équipes pour pérenniser l'outil.
-                    </p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <span class="font-display font-extrabold text-2xl text-brand-600">04</span>
+                    <h3 class="mt-3 font-display font-bold text-base text-navy-900">Transfert &amp; Autonomie</h3>
+                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Documentation claire, prise en main des outils et formation pratique des équipes.</p>
                 </div>
             </div>
         </section>
 
         <!-- =====================================================================
-             8. SECTION PARCOURS & COMPÉTENCES (2 COLONNES)
+8. SECTION PARCOURS & COMPÉTENCES
         ====================================================================== -->
-        <section id="parcours" class="py-14 sm:py-20 bg-white border-t border-slate-200">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    
-                    <!-- Colonne Gauche : Parcours & Formation (6 colonnes) -->
-                    <div class="lg:col-span-6">
-                        <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Expérience & Diplômes</span>
-                        <h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900 mb-8">Parcours</h2>
-
-                        <div class="relative border-l-2 border-slate-200 ml-3 space-y-8">
-                            <!-- Item 1 -->
-                            <div class="relative pl-7">
-                                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white"></span>
-                                <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Enseignement & Mentorat</span>
-                                <h3 class="font-display font-bold text-base sm:text-lg text-navy-900 mt-0.5">Enseignant Concepteur & Mentor</h3>
-                                <p class="text-xs font-medium text-slate-500">EduMali · Bamako</p>
-                                <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-                                    Conception de modules de formation, animation d'ateliers pratiques en outils numériques, bureautique avancée et analyse de données, accompagnement individuel des apprenants.
-                                </p>
-                            </div>
-
-                            <!-- Item 2 -->
-                            <div class="relative pl-7">
-                                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-navy-900 ring-4 ring-white"></span>
-                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Spécialisation S&E · MEAL</span>
-                                <h3 class="font-display font-bold text-base sm:text-lg text-navy-900 mt-0.5">DU GAR GP SE & Pratiques Data Terrain</h3>
-                                <p class="text-xs font-medium text-slate-500">IFRISSE · APGD · Africa-Expertise</p>
-                                <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-                                    Gestion Axée sur les Résultats (GAR), Gestion de Projet et Suivi-Évaluation (volet urgences humanitaires et développement), collecte mobile KoboToolbox et reporting d'indicateurs.
-                                </p>
-                            </div>
-
-                            <!-- Item 3 -->
-                            <div class="relative pl-7">
-                                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white"></span>
-                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Formation Supérieure</span>
-                                <h3 class="font-display font-bold text-base sm:text-lg text-navy-900 mt-0.5">Master en Génie Logiciel</h3>
-                                <p class="text-xs font-medium text-slate-500">Technolab ISTA · Bamako</p>
-                                <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-                                    Architecture logicielle, bases de données relationnelles (SQL), algorithmique, programmation Python et conception de systèmes d'information.
-                                </p>
-                            </div>
-                        </div>
+        <section id="parcours" class="py-14 sm:py-20 bg-white border-y border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Parcours</span>
+                        <h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900">Formation &amp; Expérience</h2>
                     </div>
 
-                    <!-- Colonne Droite : Compétences Catégorisées (6 colonnes) -->
-                    <div id="competences" class="lg:col-span-6">
-                        <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Savoir-faire technique</span>
-                        <h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900 mb-8">Compétences</h2>
+                    <div class="space-y-4">
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
+                            <div class="font-display font-bold text-navy-900">Diplôme Universitaire (DU) en Suivi-Évaluation (GAR / GP / SE)</div>
+                            <div class="text-xs text-brand-600 font-medium mt-0.5">IFRISSE</div>
+                            <p class="mt-2 text-xs sm:text-sm text-slate-600">Gestion axée sur les résultats, gestion de projet, suivi-évaluation et collecte de données (Kobo).</p>
+                        </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- Catégorie 1 -->
-                            <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
-                                <h3 class="font-display font-bold text-sm text-navy-900 mb-3 flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-brand-600"></span>
-                                    Analyse & Business Intelligence
-                                </h3>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Power BI</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">DAX & Power Query</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Excel Avancé (TCD, RECHERCHEX)</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Orange Data Mining</span>
-                                </div>
-                            </div>
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
+                            <div class="font-display font-bold text-navy-900">Master en Génie Logiciel</div>
+                            <div class="text-xs text-brand-600 font-medium mt-0.5">Technolab (Promotion 2021)</div>
+                            <p class="mt-2 text-xs sm:text-sm text-slate-600">Conception logicielle, structuration de données, développement et automatisation de traitements.</p>
+                        </div>
 
-                            <!-- Catégorie 2 -->
-                            <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
-                                <h3 class="font-display font-bold text-sm text-navy-900 mb-3 flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                                    Collecte & Suivi-Évaluation
-                                </h3>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">KoboToolbox</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">XLSForm (Skip logic)</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Cadre Logique & GAR</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Contrôle qualité data</span>
-                                </div>
-                            </div>
-
-                            <!-- Catégorie 3 -->
-                            <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
-                                <h3 class="font-display font-bold text-sm text-navy-900 mb-3 flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-navy-900"></span>
-                                    Dév & Data Engineering
-                                </h3>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Python (Pandas, NumPy)</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">SQL (PostgreSQL)</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Pipelines ETL</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Git & GitHub</span>
-                                </div>
-                            </div>
-
-                            <!-- Catégorie 4 -->
-                            <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
-                                <h3 class="font-display font-bold text-sm text-navy-900 mb-3 flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                    Pédagogie & Bureautique
-                                </h3>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Conception de cours</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Animation & Mentorat</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">LaTeX</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-700">Suite Office & Google</span>
-                                </div>
-                            </div>
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
+                            <div class="font-display font-bold text-navy-900">Enseignant Concepteur, Mentor &amp; Formateur</div>
+                            <div class="text-xs text-brand-600 font-medium mt-0.5">EduMali &amp; Missions Data / Pédagogie</div>
+                            <p class="mt-2 text-xs sm:text-sm text-slate-600">Création de contenus pédagogiques, accompagnement d'apprenants, mathématiques/statistiques et outils data.</p>
                         </div>
                     </div>
+                </div>
 
+                <div id="competences" class="lg:col-span-6 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Compétences</span>
+                        <h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900">Domaines d'expertise</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
+                            <h3 class="font-display font-bold text-sm text-navy-900">Analyse &amp; Pipelines Data</h3>
+                            <p class="mt-2 text-xs text-slate-600 leading-relaxed">Python (Pandas, NumPy), SQL (PostgreSQL), nettoyage ETL, indicateurs financiers &amp; risque (PAR 90).</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
+                            <h3 class="font-display font-bold text-sm text-navy-900">Business Intelligence</h3>
+                            <p class="mt-2 text-xs text-slate-600 leading-relaxed">Power BI, Excel avancé, tableaux de bord décisionnels, suivi des KPI et restitutions visuelles.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
+                            <h3 class="font-display font-bold text-sm text-navy-900">Suivi-Évaluation &amp; Collecte</h3>
+                            <p class="mt-2 text-xs text-slate-600 leading-relaxed">KoboToolbox, XLSForm, cadres logiques, contrôle qualité des données terrain et reporting S&amp;E.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
+                            <h3 class="font-display font-bold text-sm text-navy-900">Formation &amp; Pédagogie</h3>
+                            <p class="mt-2 text-xs text-slate-600 leading-relaxed">Conception de modules, ateliers pratiques, mentorat, mathématiques appliquées et outils bureautiques/data.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- =====================================================================
-             9. SECTION CONTACT & FOOTER
+9. SECTION CONTACT
         ====================================================================== -->
-        <section id="contact" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-            <div class="bg-navy-900 rounded-3xl p-8 sm:p-12 lg:p-16 text-center text-white relative overflow-hidden shadow-xl">
-                <!-- Décoration subtile -->
-                <div class="absolute top-0 right-0 -mt-12 -mr-12 w-64 h-64 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <section id="contact" class="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Contact</span>
+            <h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl text-navy-900">Discutons de votre projet ou besoin en formation</h2>
+            <p class="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+                Disponible pour des missions d'analyse de données, de suivi-évaluation, de pipelines ETL ou d'animation de formations à Bamako et à distance.
+            </p>
 
-                <div class="relative z-10 max-w-2xl mx-auto space-y-6">
-                    <span class="inline-block px-3.5 py-1 rounded-full bg-white/10 text-brand-100 text-xs font-semibold tracking-wide uppercase">
-                        Contact & Collaboration
-                    </span>
-                    <h2 class="font-display font-bold text-2xl sm:text-4xl tracking-tight">
-                        Un projet data, une enquête terrain ou un besoin en formation ?
-                    </h2>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Je suis disponible pour des postes en Data Analysis, Suivi-Évaluation (MEAL), des missions de conseil ou l'animation de formations pratiques à Bamako et à distance.
-                    </p>
-
-                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="https://wa.me/22378119788?text=Bonjour%20Abdoulaye%2C%20je%20souhaiterais%20discuter%20d'une%20opportunit%C3%A9%20avec%20vous." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm transition-all shadow-md">
-                            WhatsApp · +223 78 11 97 88
-                        </a>
-                        <a href="mailto:abdelraul140385@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white text-navy-900 hover:bg-slate-100 font-semibold text-sm transition-all">
-                            Envoyer un e-mail
-                        </a>
-                        <a href="https://github.com/abdoulaye1403/Portfolio_Pipeline_Mali" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-navy-800 hover:bg-slate-700 text-white border border-slate-700 font-semibold text-sm transition-all">
-                            Voir le GitHub
-                        </a>
-                    </div>
-
-                    <!-- Bouton copier l'adresse e-mail avec feedback discret -->
-                    <div class="pt-2">
-                        <button id="copy-email-btn" type="button" class="inline-flex items-center gap-2 text-xs text-slate-400 hover:text-white transition-colors">
-                            <span id="email-text">abdelraul140385@gmail.com</span>
-                            <span class="px-2 py-0.5 rounded bg-white/10 text-[11px]" id="copy-status">Copier</span>
-                        </button>
-                    </div>
-                </div>
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+                <a href="https://wa.me/22378119788?text=Bonjour%20Abdoulaye%2C%20je%20souhaiterais%20%C3%A9changer%20avec%20vous." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium transition-colors">
+                    WhatsApp · +223 78 11 97 88
+                </a>
+                <a href="mailto:abdelraul140385@gmail.com" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-slate-50 text-navy-900 border border-slate-200 text-sm font-medium transition-colors">
+                    abdelraul140385@gmail.com
+                </a>
+                <a href="https://github.com/abdoulaye1403" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white text-sm font-medium transition-colors">
+                    Profil GitHub
+                </a>
             </div>
         </section>
     </main>
 
-    <!-- Footer épuré -->
-    <footer class="border-t border-slate-200 bg-white py-8 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-500">
-            <div>
-                © <span id="current-year">2026</span> <strong class="text-navy-900 font-semibold">Abdoulaye Mahamadou Touré</strong> · Bamako, Mali.
-            </div>
-            <div class="flex items-center gap-5">
-                <a href="https://github.com/abdoulaye1403/Portfolio_Pipeline_Mali" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-colors">GitHub</a>
-                <a href="https://wa.me/22378119788" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-colors">WhatsApp</a>
-                <a href="#projets" class="hover:text-brand-600 transition-colors">Projets</a>
-                <a href="#parcours" class="hover:text-brand-600 transition-colors">Parcours</a>
-            </div>
+    <!-- =====================================================================
+10. PIED DE PAGE & SCRIPT MENU MOBILE
+    ====================================================================== -->
+    <footer class="py-6 bg-white border-t border-slate-200 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <span>© 2026 Abdoulaye Mahamadou Touré — Bamako, Mali</span>
+            <span>Data · Suivi-Évaluation (MEAL) · Formation</span>
         </div>
     </footer>
 
-    <!-- Script JS autonome pour le menu mobile, l'année et la copie d'email -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Année dynamique dans le footer
-            const yearEl = document.getElementById('current-year');
-            if (yearEl) {
-                yearEl.textContent = new Date().getFullYear();
-            }
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+        const links = document.querySelectorAll('.mobile-link');
 
-            // Gestion du menu mobile responsive
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const iconMenu = document.getElementById('icon-menu');
-            const iconClose = document.getElementById('icon-close');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            iconMenu.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
 
-            function toggleMenu() {
-                const isHidden = mobileMenu.classList.contains('hidden');
-                if (isHidden) {
-                    mobileMenu.classList.remove('hidden');
-                    iconMenu.classList.add('hidden');
-                    iconClose.classList.remove('hidden');
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    iconMenu.classList.remove('hidden');
-                    iconClose.classList.add('hidden');
-                }
-            }
-
-            if (menuBtn) {
-                menuBtn.addEventListener('click', toggleMenu);
-            }
-
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        toggleMenu();
-                    }
-                });
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                iconMenu.classList.remove('hidden');
+                iconClose.classList.add('hidden');
             });
-
-            // Copie de l'adresse email sans alert()
-            const copyBtn = document.getElementById('copy-email-btn');
-            const emailText = document.getElementById('email-text');
-            const copyStatus = document.getElementById('copy-status');
-
-            if (copyBtn && emailText && copyStatus) {
-                copyBtn.addEventListener('click', () => {
-                    const tempInput = document.createElement('input');
-                    tempInput.value = emailText.textContent.trim();
-                    document.body.appendChild(tempInput);
-                    tempInput.select();
-                    try {
-                        document.execCommand('copy');
-                        copyStatus.textContent = 'Copié ✓';
-                        copyStatus.classList.add('bg-emerald-500/20', 'text-emerald-300');
-                        setTimeout(() => {
-                            copyStatus.textContent = 'Copier';
-                            copyStatus.classList.remove('bg-emerald-500/20', 'text-emerald-300');
-                        }, 2500);
-                    } catch (err) {
-                        copyStatus.textContent = 'Erreur';
-                    }
-                    document.body.removeChild(tempInput);
-                });
-            }
         });
     </script>
 </body>
